@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BDD_SYS_DATA" type="BDD_SYS_DATAType">
+    <xs:annotation>
+      <xs:documentation>- Proposition descriptif reseau STROMBOLI pour Mesures Système - objectif du fichier : decrire les types de données utiles - soit attribuer des valeurs a signification humaine aux octets et bin des trames  2019/07/01 : mise à jour pour transposer des paramètres en attribut pour améliorer la lisibilité</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VALType">
+    <xs:sequence>
+      <xs:element type="xs:unsignedByte" name="REFVAL"/>
+      <xs:element type="xs:string" name="VALUE"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VALUE_SETType">
+    <xs:sequence>
+      <xs:element type="VALType" name="VAL" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DATA_INFOType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Define"/>
+      <xs:element type="VALUE_SETType" name="VALUE_SET"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="REF" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="WORD_SETType">
+    <xs:sequence>
+      <xs:element type="DATA_INFOType" name="DATA_INFO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MOTType">
+    <xs:sequence>
+      <xs:element type="WORD_SETType" name="WORD_SET" minOccurs="0"/>
+      <xs:element name="INFO" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Complement ORDDRE"/>
+            <xs:enumeration value="CRC"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="REF" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="DATA_SETType">
+    <xs:sequence>
+      <xs:element type="MOTType" name="MOT" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DATAType">
+    <xs:sequence>
+      <xs:element type="DATA_SETType" name="DATA_SET"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="IDENTIFIANT"/>
+  </xs:complexType>
+  <xs:complexType name="BDD_SYS_DATAType">
+    <xs:sequence>
+      <xs:element type="DATAType" name="DATA"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
