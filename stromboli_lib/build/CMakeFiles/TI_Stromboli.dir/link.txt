@@ -1,0 +1,1 @@
+/usr/bin/c++   -W -Wall -O3 -std=c++11  -rdynamic CMakeFiles/TI_Stromboli.dir/src/Cfg_Flux_IP.o CMakeFiles/TI_Stromboli.dir/test/TI_Stromboli.o  -o TI_Stromboli -lxerces-c --coverage 
