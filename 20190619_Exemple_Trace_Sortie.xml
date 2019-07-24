@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--- Proposition descriptif données en sortie d'analyse des trames IP STROMBOLI pour Mesures Système -->
+<!--- objectif du fichier : générer un fichier BDD pour recherche des performances via des requetes type XPATH ou equivalent -->
+<!-- -->
+<!--- Contraintes du fichier : Supprimer les IP des données pour pouvoir être exploitables sur site DGA sans compromettre les données CD -->
+<!-- -->
+<!-- 2019/06/07: ajout référence point de mesure <POINT_TST> et <CFG_POINT_MESURE> + mofi VALUE_SYS = VALUE_RAW si aucun traitement prévu -->
+<!-- -->
+<!-- -->
+<!-- -->
+<BDD_OUTPUT_DATA>
+	<OUTPUT>
+		<TEST_REF>
+			<TEST_ID>20190527105526000</TEST_ID>
+			<ORIGINE>reference fichier source PCAP données utiles brute dans la trame</ORIGINE>
+			<!-- recopie des données du fichier configuration test -->
+			<TITRE>Test PCP BIS</TITRE>
+			<REFERENCE_PROCEDURE>D48451xx</REFERENCE_PROCEDURE>
+			<VERSION_PROCEDURE>00</VERSION_PROCEDURE>
+			<SECTION_PROCEDURE>2.1</SECTION_PROCEDURE>
+			<EXIGENCES>
+				<ID_EXI>STRO_22423R3</ID_EXI>
+				<ID_EXI>STRO_sdzdzd3</ID_EXI>
+			</EXIGENCES>
+			<CONFIGURATION>
+				<LOGICIEL>
+					<SSG></SSG>
+					<SST></SST>
+				</LOGICIEL>
+				<MATERIEL>
+					<SSG></SSG>
+					<SST></SST>
+				</MATERIEL>
+			</CONFIGURATION>
+			<DATE>2019/06/15</DATE>
+			<HEURE>12:00:35</HEURE>
+			<LIEU>ZDS_ARC</LIEU>
+			<OPERATEUR>ZDS_ARC</OPERATEUR>
+			<COMMENT>RAS</COMMENT>
+			<VALIDITE>OK</VALIDITE>
+			<SAUVEGARDE>\\sarc-dfs\essai1</SAUVEGARDE>
+		</TEST_REF>
+		<TOOL_CFG>
+			<IDENT></IDENT>
+			<VERSION></VERSION>
+			<FILES>
+				<CFG_IP>reference fichier source</CFG_IP>
+				<CFG_FLUX>reference fichier source</CFG_FLUX>
+				<CFG_DATA>reference fichier source</CFG_DATA>
+				<CFG_DATA_VAL>reference fichier source</CFG_DATA_VAL>
+				<CFG_TEST>reference fichier source</CFG_TEST>
+			</FILES>
+			<DATE></DATE>
+			<HEURE></HEURE>
+		</TOOL_CFG>
+		<FRAME>
+			<IDENTIFIANT>SNBISUGO1_SNBISMOD1_Mod_P</IDENTIFIANT>
+			<NOM>UGO 1 BIS vers MOD 1 BIS</NOM>
+			<SOURCE>SNBISUGO1_CPU_P</SOURCE>
+			<DESTINATION>SNBISMOD1_Mod</DESTINATION>
+			<TIMESTAMP></TIMESTAMP>
+			<RAW>valeur des données brutes en hexadécimal</RAW>
+			<TYPE>QUERY</TYPE>
+			<FRAME_NUMBER>76</FRAME_NUMBER>
+			<FRAME_PROTOCOL>MODBUS</FRAME_PROTOCOL>
+			<IP_PROTOCOL>
+				<FLAGS>0x00</FLAGS>
+				<Header_CHECKSUM></Header_CHECKSUM>
+			</IP_PROTOCOL>
+			<TRANSMISSION_PROTOCOL>
+				<SEQ_NUMBER>153</SEQ_NUMBER>
+				<ACK_RTT>411</ACK_RTT>
+				<FLAGS>0x018</FLAGS>
+			</TRANSMISSION_PROTOCOL>
+			<DATA_SET>
+				<!-- Recopie des données utiles en respectant le format définit dans cfg_data et cfg_data_val (en données brutes et en interprété (statuts, etc...)) -->
+				<DATA_FORMAT>UGO_MOD</DATA_FORMAT>
+				<RAW>valeur des données brutes en hexadécimal</RAW>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ID</DATA_ID>
+					<REF>ID</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Identifiant emetteur de la requete</INFO>
+					<VALUE_RAW></VALUE_RAW>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.SEC_LSB</DATA_ID>
+					<REF>SEC_LSB</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Champs LSB de la datation en secondes</INFO>
+					<VALUE_RAW></VALUE_RAW>
+					<VALUE_SYS>identique à VALUE_RAW si aucune instruction spécifique</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.SEC_MSB</DATA_ID>
+					<REF>SEC_MSB</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Champs MSB de la datation en secondes</INFO>
+					<VALUE_RAW></VALUE_RAW>
+					<VALUE_SYS>identique à VALUE_RAW si aucune instruction spécifique</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.MILLISEC</DATA_ID>
+					<REF>MILLISEC</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Millisecondes de la seconde courante</INFO>
+					<VALUE_RAW></VALUE_RAW>
+					<VALUE_SYS>identique à VALUE_RAW si aucune instruction spécifique</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.N_SEQ</DATA_ID>
+					<REF>N_SEQ</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Numero de trame</INFO>
+					<VALUE_RAW></VALUE_RAW>
+					<VALUE_SYS>identique à VALUE_RAW si aucune instruction spécifique</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE</DATA_ID>
+					<REF>ORDRE</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>ORDDRE</INFO>
+					<VALUE_RAW></VALUE_RAW>
+					<VALUE_SYS>identique à VALUE_RAW si aucune instruction spécifique</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.RF</DATA_ID>
+					<REF>RF</REF>
+					<RANG>0</RANG>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Emission RF</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>RF_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.ORDREON</DATA_ID>
+					<REF>ORDREON</REF>
+					<RANG>5</RANG>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre ON</Define>
+					<VALUE_RAW>1</VALUE_RAW>
+					<VALUE_SYS>ORDREON_ON</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.HM</DATA_ID>
+					<REF>HM</REF>
+					<TYPE>BIT</TYPE>
+					<REF>HM</REF>
+					<Define>Etat Ordre HM</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>HM_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.OFF3</DATA_ID>
+					<REF>OFF3</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre OFF3</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>OFF3_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.OFF2</DATA_ID>
+					<REF>OFF2</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre OFF2</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>OFF2_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.OFF1</DATA_ID>
+					<REF>OFF1</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre OFF1</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>OFF1_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC6</DATA_ID>
+					<REF>DC6</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC6</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC6_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC5</DATA_ID>
+					<REF>DC5</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC5</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC5_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC4</DATA_ID>
+					<REF>DC4</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC4</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC4_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC3</DATA_ID>
+					<REF>DC3</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC3</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC3_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC2</DATA_ID>
+					<REF>DC2</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC2</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC2_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE.DC1</DATA_ID>
+					<REF>DC1</REF>
+					<TYPE>BIT</TYPE>
+					<Define>Etat Ordre DC1</Define>
+					<VALUE_RAW>0</VALUE_RAW>
+					<VALUE_SYS>DC1_OFF</VALUE_SYS>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.ORDRE_COMPL</DATA_ID>
+					<REF>ORDRE_COMPL</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Complement ORDDRE</INFO>
+					<VALUE_RAW>0</VALUE_RAW>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.CMD</DATA_ID>
+					<REF>CMD</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Commande</INFO>
+					<VALUE_RAW>0</VALUE_RAW>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.CMD_COMPL</DATA_ID>
+					<REF>CMD_COMPL</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>Complement Commande</INFO>
+					<VALUE_RAW>0</VALUE_RAW>
+				</DATA>
+				<DATA>
+					<DATA_ID>SNBISUGO1_SNBISMOD1_Mod_P.SNBISUGO1_CPU_P.SNBISMOD1_Mod.UGO_MOD.CRC</DATA_ID>
+					<REF>CRC</REF>
+					<TYPE>UINT16</TYPE>
+					<INFO>CRC</INFO>
+					<VALUE_RAW>0</VALUE_RAW>
+				</DATA>
+			</DATA_SET>
+		</FRAME>
+		<FRAME>
+			<IDENTIFIANT>SNBISMOD1_Mod_P_SNBISUGO1</IDENTIFIANT>
+			<NOM>MOD 1 BIS vers UGO 1 BIS</NOM>
+			<SOURCE>SNBISMOD1_Mod</SOURCE>
+			<DESTINATION>SNBISUGO1_CPU_P</DESTINATION>
+			<TIMESTAMP></TIMESTAMP>
+			<RAW>valeur des données brutes en hexadécimal</RAW>
+			<TYPE>RESPONSE</TYPE>
+			<FRAME_NUMBER>234</FRAME_NUMBER>
+			<FRAME_PROTOCOL>MODBUS</FRAME_PROTOCOL>
+			<IP_PROTOCOL>
+				<FLAGS>0x00</FLAGS>
+				<Header_CHECKSUM></Header_CHECKSUM>
+			</IP_PROTOCOL>
+			<TRANSMISSION_PROTOCOL>
+				<SEQ_NUMBER>155</SEQ_NUMBER>
+				<ACK_RTT>411</ACK_RTT>
+				<FLAGS>0x018</FLAGS>
+			</TRANSMISSION_PROTOCOL>
+			<DATA_SET>
+				<REF_PARSE_DATA>reference type de protocole utilisé</REF_PARSE_DATA>
+				<RAW>valeur des données brutes en hexadécimal</RAW>
+				<DATA>
+				<!-- Recopie des données utiles en respectant le format définit dans cfg_data et cfg_data_val (en données brutes et en interprété (statuts, etc...)) -->
+				</DATA>
+			</DATA_SET>
+		</FRAME>
+	</OUTPUT>
+</BDD_OUTPUT_DATA>
