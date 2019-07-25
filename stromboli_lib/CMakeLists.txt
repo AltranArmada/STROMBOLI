@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8)  
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall -O3 -std=c++11")
+cmake_minimum_required(VERSION 2.8)   
+SET ( CMAKE_CXX_FLAGS "-W -Wall -O3 -std=c++11" CACHE STRING "compile flags" FORCE)
 set(CMAKE_SOURCE_DIR ./)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/FindXSD.cmake)
 
