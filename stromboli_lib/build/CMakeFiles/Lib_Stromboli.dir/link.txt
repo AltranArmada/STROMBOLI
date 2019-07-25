@@ -1,2 +1,0 @@
-/usr/bin/ar qc libLib_Stromboli.a  CMakeFiles/Lib_Stromboli.dir/src/Cfg_Flux_IP.o
-/usr/bin/ranlib libLib_Stromboli.a
