@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)   
-SET ( CMAKE_CXX_FLAGS "-W -Wall -O3 -std=c++11" CACHE STRING "compile flags" FORCE)
+SET ( CMAKE_CXX_FLAGS "-W -O3 -std=c++11" CACHE STRING "compile flags" FORCE)
 set(CMAKE_SOURCE_DIR ./)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/FindXSD.cmake)
 
@@ -19,6 +19,9 @@ project(Stromboli)
 #--------------------------------------------------------------------------------------------------#
 set (SRCS  
 	./src/Cfg_Flux_IP.cxx
+	./src/Cfg_Data.cxx
+	./src/Cfg_IP.cxx
+	./src/CTest.cpp
 )
 
 set (TI_SRCS 

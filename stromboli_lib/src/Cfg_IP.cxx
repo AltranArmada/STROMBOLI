@@ -38,318 +38,415 @@
 
 #include <xsd/cxx/pre.hxx>
 
-#include "Cfg_Flux_IP.hxx"
+#include "Cfg_IP.hxx"
 
-// PROTOCOLType
+// IPv4AddressType
 // 
 
-const PROTOCOLType::Type_type& PROTOCOLType::
-Type () const
-{
-  return this->Type_.get ();
-}
 
-PROTOCOLType::Type_type& PROTOCOLType::
-Type ()
-{
-  return this->Type_.get ();
-}
-
-void PROTOCOLType::
-Type (const Type_type& x)
-{
-  this->Type_.set (x);
-}
-
-void PROTOCOLType::
-Type (::std::auto_ptr< Type_type > x)
-{
-  this->Type_.set (x);
-}
-
-const PROTOCOLType::Adresse_type& PROTOCOLType::
-Adresse () const
-{
-  return this->Adresse_.get ();
-}
-
-PROTOCOLType::Adresse_type& PROTOCOLType::
-Adresse ()
-{
-  return this->Adresse_.get ();
-}
-
-void PROTOCOLType::
-Adresse (const Adresse_type& x)
-{
-  this->Adresse_.set (x);
-}
-
-void PROTOCOLType::
-Adresse (::std::auto_ptr< Adresse_type > x)
-{
-  this->Adresse_.set (x);
-}
-
-
-// FLUXType
+// PLAGEType
 // 
 
-const FLUXType::NOM_type& FLUXType::
-NOM () const
+const PLAGEType::IP_BASE_type& PLAGEType::
+IP_BASE () const
 {
-  return this->NOM_.get ();
+  return this->IP_BASE_.get ();
 }
 
-FLUXType::NOM_type& FLUXType::
-NOM ()
+PLAGEType::IP_BASE_type& PLAGEType::
+IP_BASE ()
 {
-  return this->NOM_.get ();
+  return this->IP_BASE_.get ();
 }
 
-void FLUXType::
-NOM (const NOM_type& x)
+void PLAGEType::
+IP_BASE (const IP_BASE_type& x)
 {
-  this->NOM_.set (x);
+  this->IP_BASE_.set (x);
 }
 
-void FLUXType::
-NOM (::std::auto_ptr< NOM_type > x)
+void PLAGEType::
+IP_BASE (::std::auto_ptr< IP_BASE_type > x)
 {
-  this->NOM_.set (x);
+  this->IP_BASE_.set (x);
 }
 
-const FLUXType::PORT_type& FLUXType::
-PORT () const
+const PLAGEType::IP_MIN_type& PLAGEType::
+IP_MIN () const
 {
-  return this->PORT_.get ();
+  return this->IP_MIN_.get ();
 }
 
-FLUXType::PORT_type& FLUXType::
-PORT ()
+PLAGEType::IP_MIN_type& PLAGEType::
+IP_MIN ()
 {
-  return this->PORT_.get ();
+  return this->IP_MIN_.get ();
 }
 
-void FLUXType::
-PORT (const PORT_type& x)
+void PLAGEType::
+IP_MIN (const IP_MIN_type& x)
 {
-  this->PORT_.set (x);
+  this->IP_MIN_.set (x);
 }
 
-const FLUXType::PROTOCOL_type& FLUXType::
-PROTOCOL () const
+void PLAGEType::
+IP_MIN (::std::auto_ptr< IP_MIN_type > x)
 {
-  return this->PROTOCOL_.get ();
+  this->IP_MIN_.set (x);
 }
 
-FLUXType::PROTOCOL_type& FLUXType::
-PROTOCOL ()
+const PLAGEType::IP_MAX_type& PLAGEType::
+IP_MAX () const
 {
-  return this->PROTOCOL_.get ();
+  return this->IP_MAX_.get ();
 }
 
-void FLUXType::
-PROTOCOL (const PROTOCOL_type& x)
+PLAGEType::IP_MAX_type& PLAGEType::
+IP_MAX ()
 {
-  this->PROTOCOL_.set (x);
+  return this->IP_MAX_.get ();
 }
 
-void FLUXType::
-PROTOCOL (::std::auto_ptr< PROTOCOL_type > x)
+void PLAGEType::
+IP_MAX (const IP_MAX_type& x)
 {
-  this->PROTOCOL_.set (x);
+  this->IP_MAX_.set (x);
 }
 
-const FLUXType::IDENTIFIANT_optional& FLUXType::
+void PLAGEType::
+IP_MAX (::std::auto_ptr< IP_MAX_type > x)
+{
+  this->IP_MAX_.set (x);
+}
+
+const PLAGEType::IP_MASQUE_type& PLAGEType::
+IP_MASQUE () const
+{
+  return this->IP_MASQUE_.get ();
+}
+
+PLAGEType::IP_MASQUE_type& PLAGEType::
+IP_MASQUE ()
+{
+  return this->IP_MASQUE_.get ();
+}
+
+void PLAGEType::
+IP_MASQUE (const IP_MASQUE_type& x)
+{
+  this->IP_MASQUE_.set (x);
+}
+
+void PLAGEType::
+IP_MASQUE (::std::auto_ptr< IP_MASQUE_type > x)
+{
+  this->IP_MASQUE_.set (x);
+}
+
+const PLAGEType::IP_BROADCAST_type& PLAGEType::
+IP_BROADCAST () const
+{
+  return this->IP_BROADCAST_.get ();
+}
+
+PLAGEType::IP_BROADCAST_type& PLAGEType::
+IP_BROADCAST ()
+{
+  return this->IP_BROADCAST_.get ();
+}
+
+void PLAGEType::
+IP_BROADCAST (const IP_BROADCAST_type& x)
+{
+  this->IP_BROADCAST_.set (x);
+}
+
+void PLAGEType::
+IP_BROADCAST (::std::auto_ptr< IP_BROADCAST_type > x)
+{
+  this->IP_BROADCAST_.set (x);
+}
+
+const PLAGEType::IDENTIFIANT_optional& PLAGEType::
 IDENTIFIANT () const
 {
   return this->IDENTIFIANT_;
 }
 
-FLUXType::IDENTIFIANT_optional& FLUXType::
+PLAGEType::IDENTIFIANT_optional& PLAGEType::
 IDENTIFIANT ()
 {
   return this->IDENTIFIANT_;
 }
 
-void FLUXType::
+void PLAGEType::
 IDENTIFIANT (const IDENTIFIANT_type& x)
 {
   this->IDENTIFIANT_.set (x);
 }
 
-void FLUXType::
+void PLAGEType::
 IDENTIFIANT (const IDENTIFIANT_optional& x)
 {
   this->IDENTIFIANT_ = x;
 }
 
-void FLUXType::
+void PLAGEType::
 IDENTIFIANT (::std::auto_ptr< IDENTIFIANT_type > x)
 {
   this->IDENTIFIANT_.set (x);
 }
 
-const FLUXType::IP_Emetteur_optional& FLUXType::
-IP_Emetteur () const
-{
-  return this->IP_Emetteur_;
-}
 
-FLUXType::IP_Emetteur_optional& FLUXType::
-IP_Emetteur ()
-{
-  return this->IP_Emetteur_;
-}
-
-void FLUXType::
-IP_Emetteur (const IP_Emetteur_type& x)
-{
-  this->IP_Emetteur_.set (x);
-}
-
-void FLUXType::
-IP_Emetteur (const IP_Emetteur_optional& x)
-{
-  this->IP_Emetteur_ = x;
-}
-
-void FLUXType::
-IP_Emetteur (::std::auto_ptr< IP_Emetteur_type > x)
-{
-  this->IP_Emetteur_.set (x);
-}
-
-const FLUXType::IP_Dest_optional& FLUXType::
-IP_Dest () const
-{
-  return this->IP_Dest_;
-}
-
-FLUXType::IP_Dest_optional& FLUXType::
-IP_Dest ()
-{
-  return this->IP_Dest_;
-}
-
-void FLUXType::
-IP_Dest (const IP_Dest_type& x)
-{
-  this->IP_Dest_.set (x);
-}
-
-void FLUXType::
-IP_Dest (const IP_Dest_optional& x)
-{
-  this->IP_Dest_ = x;
-}
-
-void FLUXType::
-IP_Dest (::std::auto_ptr< IP_Dest_type > x)
-{
-  this->IP_Dest_.set (x);
-}
-
-const FLUXType::DATA_FORMAT_optional& FLUXType::
-DATA_FORMAT () const
-{
-  return this->DATA_FORMAT_;
-}
-
-FLUXType::DATA_FORMAT_optional& FLUXType::
-DATA_FORMAT ()
-{
-  return this->DATA_FORMAT_;
-}
-
-void FLUXType::
-DATA_FORMAT (const DATA_FORMAT_type& x)
-{
-  this->DATA_FORMAT_.set (x);
-}
-
-void FLUXType::
-DATA_FORMAT (const DATA_FORMAT_optional& x)
-{
-  this->DATA_FORMAT_ = x;
-}
-
-void FLUXType::
-DATA_FORMAT (::std::auto_ptr< DATA_FORMAT_type > x)
-{
-  this->DATA_FORMAT_.set (x);
-}
-
-
-// BDD_Cfg_FluxIPType
+// EQUIPType
 // 
 
-const BDD_Cfg_FluxIPType::FLUX_type& BDD_Cfg_FluxIPType::
-FLUX () const
+const EQUIPType::NOM_type& EQUIPType::
+NOM () const
 {
-  return this->FLUX_.get ();
+  return this->NOM_.get ();
 }
 
-BDD_Cfg_FluxIPType::FLUX_type& BDD_Cfg_FluxIPType::
-FLUX ()
+EQUIPType::NOM_type& EQUIPType::
+NOM ()
 {
-  return this->FLUX_.get ();
+  return this->NOM_.get ();
 }
 
-void BDD_Cfg_FluxIPType::
-FLUX (const FLUX_type& x)
+void EQUIPType::
+NOM (const NOM_type& x)
 {
-  this->FLUX_.set (x);
+  this->NOM_.set (x);
 }
 
-void BDD_Cfg_FluxIPType::
-FLUX (::std::auto_ptr< FLUX_type > x)
+void EQUIPType::
+NOM (::std::auto_ptr< NOM_type > x)
 {
-  this->FLUX_.set (x);
+  this->NOM_.set (x);
+}
+
+const EQUIPType::IP_type& EQUIPType::
+IP () const
+{
+  return this->IP_.get ();
+}
+
+EQUIPType::IP_type& EQUIPType::
+IP ()
+{
+  return this->IP_.get ();
+}
+
+void EQUIPType::
+IP (const IP_type& x)
+{
+  this->IP_.set (x);
+}
+
+void EQUIPType::
+IP (::std::auto_ptr< IP_type > x)
+{
+  this->IP_.set (x);
+}
+
+const EQUIPType::IDENTIFIANT_optional& EQUIPType::
+IDENTIFIANT () const
+{
+  return this->IDENTIFIANT_;
+}
+
+EQUIPType::IDENTIFIANT_optional& EQUIPType::
+IDENTIFIANT ()
+{
+  return this->IDENTIFIANT_;
+}
+
+void EQUIPType::
+IDENTIFIANT (const IDENTIFIANT_type& x)
+{
+  this->IDENTIFIANT_.set (x);
+}
+
+void EQUIPType::
+IDENTIFIANT (const IDENTIFIANT_optional& x)
+{
+  this->IDENTIFIANT_ = x;
+}
+
+void EQUIPType::
+IDENTIFIANT (::std::auto_ptr< IDENTIFIANT_type > x)
+{
+  this->IDENTIFIANT_.set (x);
+}
+
+
+// BDD_Cfg_ReseauType
+// 
+
+const BDD_Cfg_ReseauType::PLAGE_sequence& BDD_Cfg_ReseauType::
+PLAGE () const
+{
+  return this->PLAGE_;
+}
+
+BDD_Cfg_ReseauType::PLAGE_sequence& BDD_Cfg_ReseauType::
+PLAGE ()
+{
+  return this->PLAGE_;
+}
+
+void BDD_Cfg_ReseauType::
+PLAGE (const PLAGE_sequence& s)
+{
+  this->PLAGE_ = s;
+}
+
+const BDD_Cfg_ReseauType::EQUIP_sequence& BDD_Cfg_ReseauType::
+EQUIP () const
+{
+  return this->EQUIP_;
+}
+
+BDD_Cfg_ReseauType::EQUIP_sequence& BDD_Cfg_ReseauType::
+EQUIP ()
+{
+  return this->EQUIP_;
+}
+
+void BDD_Cfg_ReseauType::
+EQUIP (const EQUIP_sequence& s)
+{
+  this->EQUIP_ = s;
 }
 
 
 #include <xsd/cxx/xml/dom/parsing-source.hxx>
 
-// PROTOCOLType
+// IPv4AddressType
 //
 
-PROTOCOLType::
-PROTOCOLType (const Type_type& Type,
-              const Adresse_type& Adresse)
+IPv4AddressType::
+IPv4AddressType ()
+: ::xml_schema::string ()
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const char* _xsd_string_base)
+: ::xml_schema::string (_xsd_string_base)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const ::std::string& _xsd_string_base)
+: ::xml_schema::string (_xsd_string_base)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const ::xml_schema::string& _xsd_string_base)
+: ::xml_schema::string (_xsd_string_base)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const IPv4AddressType& x,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+: ::xml_schema::string (x, f, c)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const ::xercesc::DOMElement& e,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+: ::xml_schema::string (e, f, c)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const ::xercesc::DOMAttr& a,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+: ::xml_schema::string (a, f, c)
+{
+}
+
+IPv4AddressType::
+IPv4AddressType (const ::std::string& s,
+                 const ::xercesc::DOMElement* e,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+: ::xml_schema::string (s, e, f, c)
+{
+}
+
+IPv4AddressType* IPv4AddressType::
+_clone (::xml_schema::flags f,
+        ::xml_schema::container* c) const
+{
+  return new class IPv4AddressType (*this, f, c);
+}
+
+IPv4AddressType::
+~IPv4AddressType ()
+{
+}
+
+// PLAGEType
+//
+
+PLAGEType::
+PLAGEType (const IP_BASE_type& IP_BASE,
+           const IP_MIN_type& IP_MIN,
+           const IP_MAX_type& IP_MAX,
+           const IP_MASQUE_type& IP_MASQUE,
+           const IP_BROADCAST_type& IP_BROADCAST)
 : ::xml_schema::type (),
-  Type_ (Type, this),
-  Adresse_ (Adresse, this)
+  IP_BASE_ (IP_BASE, this),
+  IP_MIN_ (IP_MIN, this),
+  IP_MAX_ (IP_MAX, this),
+  IP_MASQUE_ (IP_MASQUE, this),
+  IP_BROADCAST_ (IP_BROADCAST, this),
+  IDENTIFIANT_ (this)
 {
 }
 
-PROTOCOLType::
-PROTOCOLType (const PROTOCOLType& x,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+PLAGEType::
+PLAGEType (const PLAGEType& x,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
 : ::xml_schema::type (x, f, c),
-  Type_ (x.Type_, f, this),
-  Adresse_ (x.Adresse_, f, this)
+  IP_BASE_ (x.IP_BASE_, f, this),
+  IP_MIN_ (x.IP_MIN_, f, this),
+  IP_MAX_ (x.IP_MAX_, f, this),
+  IP_MASQUE_ (x.IP_MASQUE_, f, this),
+  IP_BROADCAST_ (x.IP_BROADCAST_, f, this),
+  IDENTIFIANT_ (x.IDENTIFIANT_, f, this)
 {
 }
 
-PROTOCOLType::
-PROTOCOLType (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+PLAGEType::
+PLAGEType (const ::xercesc::DOMElement& e,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
 : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-  Type_ (this),
-  Adresse_ (this)
+  IP_BASE_ (this),
+  IP_MIN_ (this),
+  IP_MAX_ (this),
+  IP_MASQUE_ (this),
+  IP_BROADCAST_ (this),
+  IDENTIFIANT_ (this)
 {
   if ((f & ::xml_schema::flags::base) == 0)
   {
-    ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
+    ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
     this->parse (p, f);
   }
 }
 
-void PROTOCOLType::
+void PLAGEType::
 parse (::xsd::cxx::xml::dom::parser< char >& p,
        ::xml_schema::flags f)
 {
@@ -359,30 +456,72 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
     const ::xsd::cxx::xml::qualified_name< char > n (
       ::xsd::cxx::xml::dom::name< char > (i));
 
-    // Type
+    // IP_BASE
     //
-    if (n.name () == "Type" && n.namespace_ ().empty ())
+    if (n.name () == "IP_BASE" && n.namespace_ ().empty ())
     {
-      ::std::auto_ptr< Type_type > r (
-        Type_traits::create (i, f, this));
+      ::std::auto_ptr< IP_BASE_type > r (
+        IP_BASE_traits::create (i, f, this));
 
-      if (!Type_.present ())
+      if (!IP_BASE_.present ())
       {
-        this->Type_.set (r);
+        this->IP_BASE_.set (r);
         continue;
       }
     }
 
-    // Adresse
+    // IP_MIN
     //
-    if (n.name () == "Adresse" && n.namespace_ ().empty ())
+    if (n.name () == "IP_MIN" && n.namespace_ ().empty ())
     {
-      ::std::auto_ptr< Adresse_type > r (
-        Adresse_traits::create (i, f, this));
+      ::std::auto_ptr< IP_MIN_type > r (
+        IP_MIN_traits::create (i, f, this));
 
-      if (!Adresse_.present ())
+      if (!IP_MIN_.present ())
       {
-        this->Adresse_.set (r);
+        this->IP_MIN_.set (r);
+        continue;
+      }
+    }
+
+    // IP_MAX
+    //
+    if (n.name () == "IP_MAX" && n.namespace_ ().empty ())
+    {
+      ::std::auto_ptr< IP_MAX_type > r (
+        IP_MAX_traits::create (i, f, this));
+
+      if (!IP_MAX_.present ())
+      {
+        this->IP_MAX_.set (r);
+        continue;
+      }
+    }
+
+    // IP_MASQUE
+    //
+    if (n.name () == "IP_MASQUE" && n.namespace_ ().empty ())
+    {
+      ::std::auto_ptr< IP_MASQUE_type > r (
+        IP_MASQUE_traits::create (i, f, this));
+
+      if (!IP_MASQUE_.present ())
+      {
+        this->IP_MASQUE_.set (r);
+        continue;
+      }
+    }
+
+    // IP_BROADCAST
+    //
+    if (n.name () == "IP_BROADCAST" && n.namespace_ ().empty ())
+    {
+      ::std::auto_ptr< IP_BROADCAST_type > r (
+        IP_BROADCAST_traits::create (i, f, this));
+
+      if (!IP_BROADCAST_.present ())
+      {
+        this->IP_BROADCAST_.set (r);
         continue;
       }
     }
@@ -390,106 +529,116 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
     break;
   }
 
-  if (!Type_.present ())
+  if (!IP_BASE_.present ())
   {
     throw ::xsd::cxx::tree::expected_element< char > (
-      "Type",
+      "IP_BASE",
       "");
   }
 
-  if (!Adresse_.present ())
+  if (!IP_MIN_.present ())
   {
     throw ::xsd::cxx::tree::expected_element< char > (
-      "Adresse",
+      "IP_MIN",
       "");
+  }
+
+  if (!IP_MAX_.present ())
+  {
+    throw ::xsd::cxx::tree::expected_element< char > (
+      "IP_MAX",
+      "");
+  }
+
+  if (!IP_MASQUE_.present ())
+  {
+    throw ::xsd::cxx::tree::expected_element< char > (
+      "IP_MASQUE",
+      "");
+  }
+
+  if (!IP_BROADCAST_.present ())
+  {
+    throw ::xsd::cxx::tree::expected_element< char > (
+      "IP_BROADCAST",
+      "");
+  }
+
+  while (p.more_attributes ())
+  {
+    const ::xercesc::DOMAttr& i (p.next_attribute ());
+    const ::xsd::cxx::xml::qualified_name< char > n (
+      ::xsd::cxx::xml::dom::name< char > (i));
+
+    if (n.name () == "IDENTIFIANT" && n.namespace_ ().empty ())
+    {
+      this->IDENTIFIANT_.set (IDENTIFIANT_traits::create (i, f, this));
+      continue;
+    }
   }
 }
 
-PROTOCOLType* PROTOCOLType::
+PLAGEType* PLAGEType::
 _clone (::xml_schema::flags f,
         ::xml_schema::container* c) const
 {
-  return new class PROTOCOLType (*this, f, c);
+  return new class PLAGEType (*this, f, c);
 }
 
-PROTOCOLType& PROTOCOLType::
-operator= (const PROTOCOLType& x)
+PLAGEType& PLAGEType::
+operator= (const PLAGEType& x)
 {
   if (this != &x)
   {
     static_cast< ::xml_schema::type& > (*this) = x;
-    this->Type_ = x.Type_;
-    this->Adresse_ = x.Adresse_;
+    this->IP_BASE_ = x.IP_BASE_;
+    this->IP_MIN_ = x.IP_MIN_;
+    this->IP_MAX_ = x.IP_MAX_;
+    this->IP_MASQUE_ = x.IP_MASQUE_;
+    this->IP_BROADCAST_ = x.IP_BROADCAST_;
+    this->IDENTIFIANT_ = x.IDENTIFIANT_;
   }
 
   return *this;
 }
 
-PROTOCOLType::
-~PROTOCOLType ()
+PLAGEType::
+~PLAGEType ()
 {
 }
 
-// FLUXType
+// EQUIPType
 //
 
-FLUXType::
-FLUXType (const NOM_type& NOM,
-          const PORT_type& PORT,
-          const PROTOCOL_type& PROTOCOL)
+EQUIPType::
+EQUIPType (const NOM_type& NOM,
+           const IP_type& IP)
 : ::xml_schema::type (),
   NOM_ (NOM, this),
-  PORT_ (PORT, this),
-  PROTOCOL_ (PROTOCOL, this),
-  IDENTIFIANT_ (this),
-  IP_Emetteur_ (this),
-  IP_Dest_ (this),
-  DATA_FORMAT_ (this)
+  IP_ (IP, this),
+  IDENTIFIANT_ (this)
 {
 }
 
-FLUXType::
-FLUXType (const NOM_type& NOM,
-          const PORT_type& PORT,
-          ::std::auto_ptr< PROTOCOL_type > PROTOCOL)
-: ::xml_schema::type (),
-  NOM_ (NOM, this),
-  PORT_ (PORT, this),
-  PROTOCOL_ (PROTOCOL, this),
-  IDENTIFIANT_ (this),
-  IP_Emetteur_ (this),
-  IP_Dest_ (this),
-  DATA_FORMAT_ (this)
-{
-}
-
-FLUXType::
-FLUXType (const FLUXType& x,
-          ::xml_schema::flags f,
-          ::xml_schema::container* c)
+EQUIPType::
+EQUIPType (const EQUIPType& x,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
 : ::xml_schema::type (x, f, c),
   NOM_ (x.NOM_, f, this),
-  PORT_ (x.PORT_, f, this),
-  PROTOCOL_ (x.PROTOCOL_, f, this),
-  IDENTIFIANT_ (x.IDENTIFIANT_, f, this),
-  IP_Emetteur_ (x.IP_Emetteur_, f, this),
-  IP_Dest_ (x.IP_Dest_, f, this),
-  DATA_FORMAT_ (x.DATA_FORMAT_, f, this)
+  IP_ (x.IP_, f, this),
+  IDENTIFIANT_ (x.IDENTIFIANT_, f, this)
 {
 }
 
-FLUXType::
-FLUXType (const ::xercesc::DOMElement& e,
-          ::xml_schema::flags f,
-          ::xml_schema::container* c)
+EQUIPType::
+EQUIPType (const ::xercesc::DOMElement& e,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
 : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
   NOM_ (this),
-  PORT_ (this),
-  PROTOCOL_ (this),
-  IDENTIFIANT_ (this),
-  IP_Emetteur_ (this),
-  IP_Dest_ (this),
-  DATA_FORMAT_ (this)
+  IP_ (this),
+  IDENTIFIANT_ (this)
 {
   if ((f & ::xml_schema::flags::base) == 0)
   {
@@ -498,7 +647,7 @@ FLUXType (const ::xercesc::DOMElement& e,
   }
 }
 
-void FLUXType::
+void EQUIPType::
 parse (::xsd::cxx::xml::dom::parser< char >& p,
        ::xml_schema::flags f)
 {
@@ -522,27 +671,16 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
       }
     }
 
-    // PORT
+    // IP
     //
-    if (n.name () == "PORT" && n.namespace_ ().empty ())
+    if (n.name () == "IP" && n.namespace_ ().empty ())
     {
-      if (!PORT_.present ())
-      {
-        this->PORT_.set (PORT_traits::create (i, f, this));
-        continue;
-      }
-    }
+      ::std::auto_ptr< IP_type > r (
+        IP_traits::create (i, f, this));
 
-    // PROTOCOL
-    //
-    if (n.name () == "PROTOCOL" && n.namespace_ ().empty ())
-    {
-      ::std::auto_ptr< PROTOCOL_type > r (
-        PROTOCOL_traits::create (i, f, this));
-
-      if (!PROTOCOL_.present ())
+      if (!IP_.present ())
       {
-        this->PROTOCOL_.set (r);
+        this->IP_.set (r);
         continue;
       }
     }
@@ -557,17 +695,10 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
       "");
   }
 
-  if (!PORT_.present ())
+  if (!IP_.present ())
   {
     throw ::xsd::cxx::tree::expected_element< char > (
-      "PORT",
-      "");
-  }
-
-  if (!PROTOCOL_.present ())
-  {
-    throw ::xsd::cxx::tree::expected_element< char > (
-      "PROTOCOL",
+      "IP",
       "");
   }
 
@@ -582,89 +713,63 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
       this->IDENTIFIANT_.set (IDENTIFIANT_traits::create (i, f, this));
       continue;
     }
-
-    if (n.name () == "IP_Emetteur" && n.namespace_ ().empty ())
-    {
-      this->IP_Emetteur_.set (IP_Emetteur_traits::create (i, f, this));
-      continue;
-    }
-
-    if (n.name () == "IP_Dest" && n.namespace_ ().empty ())
-    {
-      this->IP_Dest_.set (IP_Dest_traits::create (i, f, this));
-      continue;
-    }
-
-    if (n.name () == "DATA_FORMAT" && n.namespace_ ().empty ())
-    {
-      this->DATA_FORMAT_.set (DATA_FORMAT_traits::create (i, f, this));
-      continue;
-    }
   }
 }
 
-FLUXType* FLUXType::
+EQUIPType* EQUIPType::
 _clone (::xml_schema::flags f,
         ::xml_schema::container* c) const
 {
-  return new class FLUXType (*this, f, c);
+  return new class EQUIPType (*this, f, c);
 }
 
-FLUXType& FLUXType::
-operator= (const FLUXType& x)
+EQUIPType& EQUIPType::
+operator= (const EQUIPType& x)
 {
   if (this != &x)
   {
     static_cast< ::xml_schema::type& > (*this) = x;
     this->NOM_ = x.NOM_;
-    this->PORT_ = x.PORT_;
-    this->PROTOCOL_ = x.PROTOCOL_;
+    this->IP_ = x.IP_;
     this->IDENTIFIANT_ = x.IDENTIFIANT_;
-    this->IP_Emetteur_ = x.IP_Emetteur_;
-    this->IP_Dest_ = x.IP_Dest_;
-    this->DATA_FORMAT_ = x.DATA_FORMAT_;
   }
 
   return *this;
 }
 
-FLUXType::
-~FLUXType ()
+EQUIPType::
+~EQUIPType ()
 {
 }
 
-// BDD_Cfg_FluxIPType
+// BDD_Cfg_ReseauType
 //
 
-BDD_Cfg_FluxIPType::
-BDD_Cfg_FluxIPType (const FLUX_type& FLUX)
+BDD_Cfg_ReseauType::
+BDD_Cfg_ReseauType ()
 : ::xml_schema::type (),
-  FLUX_ (FLUX, this)
+  PLAGE_ (this),
+  EQUIP_ (this)
 {
 }
 
-BDD_Cfg_FluxIPType::
-BDD_Cfg_FluxIPType (::std::auto_ptr< FLUX_type > FLUX)
-: ::xml_schema::type (),
-  FLUX_ (FLUX, this)
-{
-}
-
-BDD_Cfg_FluxIPType::
-BDD_Cfg_FluxIPType (const BDD_Cfg_FluxIPType& x,
+BDD_Cfg_ReseauType::
+BDD_Cfg_ReseauType (const BDD_Cfg_ReseauType& x,
                     ::xml_schema::flags f,
                     ::xml_schema::container* c)
 : ::xml_schema::type (x, f, c),
-  FLUX_ (x.FLUX_, f, this)
+  PLAGE_ (x.PLAGE_, f, this),
+  EQUIP_ (x.EQUIP_, f, this)
 {
 }
 
-BDD_Cfg_FluxIPType::
-BDD_Cfg_FluxIPType (const ::xercesc::DOMElement& e,
+BDD_Cfg_ReseauType::
+BDD_Cfg_ReseauType (const ::xercesc::DOMElement& e,
                     ::xml_schema::flags f,
                     ::xml_schema::container* c)
 : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-  FLUX_ (this)
+  PLAGE_ (this),
+  EQUIP_ (this)
 {
   if ((f & ::xml_schema::flags::base) == 0)
   {
@@ -673,7 +778,7 @@ BDD_Cfg_FluxIPType (const ::xercesc::DOMElement& e,
   }
 }
 
-void BDD_Cfg_FluxIPType::
+void BDD_Cfg_ReseauType::
 parse (::xsd::cxx::xml::dom::parser< char >& p,
        ::xml_schema::flags f)
 {
@@ -683,52 +788,54 @@ parse (::xsd::cxx::xml::dom::parser< char >& p,
     const ::xsd::cxx::xml::qualified_name< char > n (
       ::xsd::cxx::xml::dom::name< char > (i));
 
-    // FLUX
+    // PLAGE
     //
-    if (n.name () == "FLUX" && n.namespace_ ().empty ())
+    if (n.name () == "PLAGE" && n.namespace_ ().empty ())
     {
-      ::std::auto_ptr< FLUX_type > r (
-        FLUX_traits::create (i, f, this));
+      ::std::auto_ptr< PLAGE_type > r (
+        PLAGE_traits::create (i, f, this));
 
-      if (!FLUX_.present ())
-      {
-        this->FLUX_.set (r);
-        continue;
-      }
+      this->PLAGE_.push_back (r);
+      continue;
+    }
+
+    // EQUIP
+    //
+    if (n.name () == "EQUIP" && n.namespace_ ().empty ())
+    {
+      ::std::auto_ptr< EQUIP_type > r (
+        EQUIP_traits::create (i, f, this));
+
+      this->EQUIP_.push_back (r);
+      continue;
     }
 
     break;
   }
-
-  if (!FLUX_.present ())
-  {
-    throw ::xsd::cxx::tree::expected_element< char > (
-      "FLUX",
-      "");
-  }
 }
 
-BDD_Cfg_FluxIPType* BDD_Cfg_FluxIPType::
+BDD_Cfg_ReseauType* BDD_Cfg_ReseauType::
 _clone (::xml_schema::flags f,
         ::xml_schema::container* c) const
 {
-  return new class BDD_Cfg_FluxIPType (*this, f, c);
+  return new class BDD_Cfg_ReseauType (*this, f, c);
 }
 
-BDD_Cfg_FluxIPType& BDD_Cfg_FluxIPType::
-operator= (const BDD_Cfg_FluxIPType& x)
+BDD_Cfg_ReseauType& BDD_Cfg_ReseauType::
+operator= (const BDD_Cfg_ReseauType& x)
 {
   if (this != &x)
   {
     static_cast< ::xml_schema::type& > (*this) = x;
-    this->FLUX_ = x.FLUX_;
+    this->PLAGE_ = x.PLAGE_;
+    this->EQUIP_ = x.EQUIP_;
   }
 
   return *this;
 }
 
-BDD_Cfg_FluxIPType::
-~BDD_Cfg_FluxIPType ()
+BDD_Cfg_ReseauType::
+~BDD_Cfg_ReseauType ()
 {
 }
 
@@ -736,8 +843,8 @@ BDD_Cfg_FluxIPType::
 #include <xsd/cxx/xml/sax/std-input-source.hxx>
 #include <xsd/cxx/tree/error-handler.hxx>
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& u,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& u,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
@@ -753,13 +860,13 @@ BDD_Cfg_FluxIP (const ::std::string& u,
 
   h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& u,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& u,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -775,13 +882,13 @@ BDD_Cfg_FluxIP (const ::std::string& u,
   if (!d.get ())
     throw ::xsd::cxx::tree::parsing< char > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& u,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& u,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -793,13 +900,13 @@ BDD_Cfg_FluxIP (const ::std::string& u,
   if (!d.get ())
     throw ::xsd::cxx::tree::parsing< char > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
@@ -808,11 +915,11 @@ BDD_Cfg_FluxIP (::std::istream& is,
     (f & ::xml_schema::flags::keep_dom) == 0);
 
   ::xsd::cxx::xml::sax::std_input_source isrc (is);
-  return ::BDD_Cfg_FluxIP (isrc, f, p);
+  return ::BDD_Cfg_Reseau (isrc, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -822,21 +929,21 @@ BDD_Cfg_FluxIP (::std::istream& is,
     (f & ::xml_schema::flags::keep_dom) == 0);
 
   ::xsd::cxx::xml::sax::std_input_source isrc (is);
-  return ::BDD_Cfg_FluxIP (isrc, h, f, p);
+  return ::BDD_Cfg_Reseau (isrc, h, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
   ::xsd::cxx::xml::sax::std_input_source isrc (is);
-  return ::BDD_Cfg_FluxIP (isrc, h, f, p);
+  return ::BDD_Cfg_Reseau (isrc, h, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -846,11 +953,11 @@ BDD_Cfg_FluxIP (::std::istream& is,
     (f & ::xml_schema::flags::keep_dom) == 0);
 
   ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-  return ::BDD_Cfg_FluxIP (isrc, f, p);
+  return ::BDD_Cfg_Reseau (isrc, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -861,22 +968,22 @@ BDD_Cfg_FluxIP (::std::istream& is,
     (f & ::xml_schema::flags::keep_dom) == 0);
 
   ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-  return ::BDD_Cfg_FluxIP (isrc, h, f, p);
+  return ::BDD_Cfg_Reseau (isrc, h, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& sid,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
   ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-  return ::BDD_Cfg_FluxIP (isrc, h, f, p);
+  return ::BDD_Cfg_Reseau (isrc, h, f, p);
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& i,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& i,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
@@ -888,13 +995,13 @@ BDD_Cfg_FluxIP (::xercesc::InputSource& i,
 
   h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& i,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& i,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -906,13 +1013,13 @@ BDD_Cfg_FluxIP (::xercesc::InputSource& i,
   if (!d.get ())
     throw ::xsd::cxx::tree::parsing< char > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& i,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& i,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -924,13 +1031,13 @@ BDD_Cfg_FluxIP (::xercesc::InputSource& i,
   if (!d.get ())
     throw ::xsd::cxx::tree::parsing< char > ();
 
-  return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-    ::BDD_Cfg_FluxIP (
+  return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+    ::BDD_Cfg_Reseau (
       d, f | ::xml_schema::flags::own_dom, p));
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::xercesc::DOMDocument& doc,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::xercesc::DOMDocument& doc,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
 {
@@ -939,8 +1046,8 @@ BDD_Cfg_FluxIP (const ::xercesc::DOMDocument& doc,
     ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
       static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-    return ::std::auto_ptr< ::BDD_Cfg_FluxIPType > (
-      ::BDD_Cfg_FluxIP (
+    return ::std::auto_ptr< ::BDD_Cfg_ReseauType > (
+      ::BDD_Cfg_Reseau (
         d, f | ::xml_schema::flags::own_dom, p));
   }
 
@@ -948,11 +1055,11 @@ BDD_Cfg_FluxIP (const ::xercesc::DOMDocument& doc,
   const ::xsd::cxx::xml::qualified_name< char > n (
     ::xsd::cxx::xml::dom::name< char > (e));
 
-  if (n.name () == "BDD_Cfg_FluxIP" &&
+  if (n.name () == "BDD_Cfg_Reseau" &&
       n.namespace_ () == "")
   {
-    ::std::auto_ptr< ::BDD_Cfg_FluxIPType > r (
-      ::xsd::cxx::tree::traits< ::BDD_Cfg_FluxIPType, char >::create (
+    ::std::auto_ptr< ::BDD_Cfg_ReseauType > r (
+      ::xsd::cxx::tree::traits< ::BDD_Cfg_ReseauType, char >::create (
         e, f, 0));
     return r;
   }
@@ -960,12 +1067,12 @@ BDD_Cfg_FluxIP (const ::xercesc::DOMDocument& doc,
   throw ::xsd::cxx::tree::unexpected_element < char > (
     n.name (),
     n.namespace_ (),
-    "BDD_Cfg_FluxIP",
+    "BDD_Cfg_Reseau",
     "");
 }
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties&)
 {
@@ -986,11 +1093,11 @@ BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
                      (c.get () ? &c : &d),
                      0);
 
-  if (n.name () == "BDD_Cfg_FluxIP" &&
+  if (n.name () == "BDD_Cfg_Reseau" &&
       n.namespace_ () == "")
   {
-    ::std::auto_ptr< ::BDD_Cfg_FluxIPType > r (
-      ::xsd::cxx::tree::traits< ::BDD_Cfg_FluxIPType, char >::create (
+    ::std::auto_ptr< ::BDD_Cfg_ReseauType > r (
+      ::xsd::cxx::tree::traits< ::BDD_Cfg_ReseauType, char >::create (
         e, f, 0));
     return r;
   }
@@ -998,7 +1105,7 @@ BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
   throw ::xsd::cxx::tree::unexpected_element < char > (
     n.name (),
     n.namespace_ (),
-    "BDD_Cfg_FluxIP",
+    "BDD_Cfg_Reseau",
     "");
 }
 
@@ -1007,8 +1114,8 @@ BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
 #include <xsd/cxx/xml/dom/serialization-source.hxx>
 
 void
-BDD_Cfg_FluxIP (::std::ostream& o,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::std::ostream& o,
+                const ::BDD_Cfg_ReseauType& s,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
@@ -1017,7 +1124,7 @@ BDD_Cfg_FluxIP (::std::ostream& o,
     (f & ::xml_schema::flags::dont_initialize) == 0);
 
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
 
   ::xsd::cxx::tree::error_handler< char > h;
 
@@ -1029,8 +1136,8 @@ BDD_Cfg_FluxIP (::std::ostream& o,
 }
 
 void
-BDD_Cfg_FluxIP (::std::ostream& o,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::std::ostream& o,
+                const ::BDD_Cfg_ReseauType& s,
                 ::xml_schema::error_handler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
@@ -1040,7 +1147,7 @@ BDD_Cfg_FluxIP (::std::ostream& o,
     (f & ::xml_schema::flags::dont_initialize) == 0);
 
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
   ::xsd::cxx::xml::dom::ostream_format_target t (o);
   if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
   {
@@ -1049,15 +1156,15 @@ BDD_Cfg_FluxIP (::std::ostream& o,
 }
 
 void
-BDD_Cfg_FluxIP (::std::ostream& o,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::std::ostream& o,
+                const ::BDD_Cfg_ReseauType& s,
                 ::xercesc::DOMErrorHandler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
 {
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
   ::xsd::cxx::xml::dom::ostream_format_target t (o);
   if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
   {
@@ -1066,14 +1173,14 @@ BDD_Cfg_FluxIP (::std::ostream& o,
 }
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& t,
+                const ::BDD_Cfg_ReseauType& s,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
 {
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
 
   ::xsd::cxx::tree::error_handler< char > h;
 
@@ -1084,15 +1191,15 @@ BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
 }
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& t,
+                const ::BDD_Cfg_ReseauType& s,
                 ::xml_schema::error_handler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
 {
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
   if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
   {
     throw ::xsd::cxx::tree::serialization< char > ();
@@ -1100,15 +1207,15 @@ BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
 }
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& t,
+                const ::BDD_Cfg_ReseauType& s,
                 ::xercesc::DOMErrorHandler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
 {
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
-    ::BDD_Cfg_FluxIP (s, m, f));
+    ::BDD_Cfg_Reseau (s, m, f));
   if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
   {
     throw ::xsd::cxx::tree::serialization< char > ();
@@ -1116,15 +1223,15 @@ BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& t,
 }
 
 void
-BDD_Cfg_FluxIP (::xercesc::DOMDocument& d,
-                const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (::xercesc::DOMDocument& d,
+                const ::BDD_Cfg_ReseauType& s,
                 ::xml_schema::flags)
 {
   ::xercesc::DOMElement& e (*d.getDocumentElement ());
   const ::xsd::cxx::xml::qualified_name< char > n (
     ::xsd::cxx::xml::dom::name< char > (e));
 
-  if (n.name () == "BDD_Cfg_FluxIP" &&
+  if (n.name () == "BDD_Cfg_Reseau" &&
       n.namespace_ () == "")
   {
     e << s;
@@ -1134,56 +1241,120 @@ BDD_Cfg_FluxIP (::xercesc::DOMDocument& d,
     throw ::xsd::cxx::tree::unexpected_element < char > (
       n.name (),
       n.namespace_ (),
-      "BDD_Cfg_FluxIP",
+      "BDD_Cfg_Reseau",
       "");
   }
 }
 
 ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
-BDD_Cfg_FluxIP (const ::BDD_Cfg_FluxIPType& s,
+BDD_Cfg_Reseau (const ::BDD_Cfg_ReseauType& s,
                 const ::xml_schema::namespace_infomap& m,
                 ::xml_schema::flags f)
 {
   ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d (
     ::xsd::cxx::xml::dom::serialize< char > (
-      "BDD_Cfg_FluxIP",
+      "BDD_Cfg_Reseau",
       "",
       m, f));
 
-  ::BDD_Cfg_FluxIP (*d, s, f);
+  ::BDD_Cfg_Reseau (*d, s, f);
   return d;
 }
 
 void
-operator<< (::xercesc::DOMElement& e, const PROTOCOLType& i)
+operator<< (::xercesc::DOMElement& e, const IPv4AddressType& i)
+{
+  e << static_cast< const ::xml_schema::string& > (i);
+}
+
+void
+operator<< (::xercesc::DOMAttr& a, const IPv4AddressType& i)
+{
+  a << static_cast< const ::xml_schema::string& > (i);
+}
+
+void
+operator<< (::xml_schema::list_stream& l,
+            const IPv4AddressType& i)
+{
+  l << static_cast< const ::xml_schema::string& > (i);
+}
+
+void
+operator<< (::xercesc::DOMElement& e, const PLAGEType& i)
 {
   e << static_cast< const ::xml_schema::type& > (i);
 
-  // Type
+  // IP_BASE
   //
   {
     ::xercesc::DOMElement& s (
       ::xsd::cxx::xml::dom::create_element (
-        "Type",
+        "IP_BASE",
         e));
 
-    s << i.Type ();
+    s << i.IP_BASE ();
   }
 
-  // Adresse
+  // IP_MIN
   //
   {
     ::xercesc::DOMElement& s (
       ::xsd::cxx::xml::dom::create_element (
-        "Adresse",
+        "IP_MIN",
         e));
 
-    s << i.Adresse ();
+    s << i.IP_MIN ();
+  }
+
+  // IP_MAX
+  //
+  {
+    ::xercesc::DOMElement& s (
+      ::xsd::cxx::xml::dom::create_element (
+        "IP_MAX",
+        e));
+
+    s << i.IP_MAX ();
+  }
+
+  // IP_MASQUE
+  //
+  {
+    ::xercesc::DOMElement& s (
+      ::xsd::cxx::xml::dom::create_element (
+        "IP_MASQUE",
+        e));
+
+    s << i.IP_MASQUE ();
+  }
+
+  // IP_BROADCAST
+  //
+  {
+    ::xercesc::DOMElement& s (
+      ::xsd::cxx::xml::dom::create_element (
+        "IP_BROADCAST",
+        e));
+
+    s << i.IP_BROADCAST ();
+  }
+
+  // IDENTIFIANT
+  //
+  if (i.IDENTIFIANT ())
+  {
+    ::xercesc::DOMAttr& a (
+      ::xsd::cxx::xml::dom::create_attribute (
+        "IDENTIFIANT",
+        e));
+
+    a << *i.IDENTIFIANT ();
   }
 }
 
 void
-operator<< (::xercesc::DOMElement& e, const FLUXType& i)
+operator<< (::xercesc::DOMElement& e, const EQUIPType& i)
 {
   e << static_cast< const ::xml_schema::type& > (i);
 
@@ -1198,26 +1369,15 @@ operator<< (::xercesc::DOMElement& e, const FLUXType& i)
     s << i.NOM ();
   }
 
-  // PORT
+  // IP
   //
   {
     ::xercesc::DOMElement& s (
       ::xsd::cxx::xml::dom::create_element (
-        "PORT",
+        "IP",
         e));
 
-    s << i.PORT ();
-  }
-
-  // PROTOCOL
-  //
-  {
-    ::xercesc::DOMElement& s (
-      ::xsd::cxx::xml::dom::create_element (
-        "PROTOCOL",
-        e));
-
-    s << i.PROTOCOL ();
+    s << i.IP ();
   }
 
   // IDENTIFIANT
@@ -1231,58 +1391,39 @@ operator<< (::xercesc::DOMElement& e, const FLUXType& i)
 
     a << *i.IDENTIFIANT ();
   }
-
-  // IP_Emetteur
-  //
-  if (i.IP_Emetteur ())
-  {
-    ::xercesc::DOMAttr& a (
-      ::xsd::cxx::xml::dom::create_attribute (
-        "IP_Emetteur",
-        e));
-
-    a << *i.IP_Emetteur ();
-  }
-
-  // IP_Dest
-  //
-  if (i.IP_Dest ())
-  {
-    ::xercesc::DOMAttr& a (
-      ::xsd::cxx::xml::dom::create_attribute (
-        "IP_Dest",
-        e));
-
-    a << *i.IP_Dest ();
-  }
-
-  // DATA_FORMAT
-  //
-  if (i.DATA_FORMAT ())
-  {
-    ::xercesc::DOMAttr& a (
-      ::xsd::cxx::xml::dom::create_attribute (
-        "DATA_FORMAT",
-        e));
-
-    a << *i.DATA_FORMAT ();
-  }
 }
 
 void
-operator<< (::xercesc::DOMElement& e, const BDD_Cfg_FluxIPType& i)
+operator<< (::xercesc::DOMElement& e, const BDD_Cfg_ReseauType& i)
 {
   e << static_cast< const ::xml_schema::type& > (i);
 
-  // FLUX
+  // PLAGE
   //
+  for (BDD_Cfg_ReseauType::PLAGE_const_iterator
+       b (i.PLAGE ().begin ()), n (i.PLAGE ().end ());
+       b != n; ++b)
   {
     ::xercesc::DOMElement& s (
       ::xsd::cxx::xml::dom::create_element (
-        "FLUX",
+        "PLAGE",
         e));
 
-    s << i.FLUX ();
+    s << *b;
+  }
+
+  // EQUIP
+  //
+  for (BDD_Cfg_ReseauType::EQUIP_const_iterator
+       b (i.EQUIP ().begin ()), n (i.EQUIP ().end ());
+       b != n; ++b)
+  {
+    ::xercesc::DOMElement& s (
+      ::xsd::cxx::xml::dom::create_element (
+        "EQUIP",
+        e));
+
+    s << *b;
   }
 }
 

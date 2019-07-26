@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<BDD_Cfg_Reseau xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/mcorset/Documents/Altran/Safran/STROMBOLI/stromboli_lib/xsd/Cfg_IP.xsd">
+  <PLAGE IDENTIFIANT="SYS_CMD">
+    <IP_BASE>192.168.100.0</IP_BASE>
+    <IP_MIN>192.168.100.1</IP_MIN>
+    <IP_MAX>192.168.101.254</IP_MAX>
+    <IP_MASQUE>255.255.254.0</IP_MASQUE>
+    <IP_BROADCAST>192.168.101.255</IP_BROADCAST>
+  </PLAGE>
+  <PLAGE IDENTIFIANT="SYS_SURV">
+    <IP_BASE>192.168.100.0</IP_BASE>
+    <IP_MIN>192.168.100.1</IP_MIN>
+    <IP_MAX>192.168.101.254</IP_MAX>
+    <IP_MASQUE>255.255.254.0</IP_MASQUE>
+    <IP_BROADCAST>192.168.101.255</IP_BROADCAST>
+  </PLAGE>
+  <EQUIP IDENTIFIANT="PCPBISUOP1_CPU_P">
+    <NOM>PCP BIS Voie 1 Principale</NOM>
+    <IP>192.168.100.11</IP>
+  </EQUIP>
+  <EQUIP IDENTIFIANT="PCPBISUOP1_CPU_A">
+    <NOM>PCP BIS Voie 1 Secondaire</NOM>
+    <IP>192.168.100.12</IP>
+  </EQUIP>
+</BDD_Cfg_Reseau>

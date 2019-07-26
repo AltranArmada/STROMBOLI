@@ -31,8 +31,8 @@
 // in the accompanying FLOSSE file.
 //
 
-#ifndef C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_FLUX_IP_HXX
-#define C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_FLUX_IP_HXX
+#ifndef C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_IP_HXX
+#define C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_IP_HXX
 
 #ifndef XSD_USE_CHAR
 #define XSD_USE_CHAR
@@ -248,9 +248,10 @@ namespace xml_schema
 
 // Forward declarations.
 //
-class PROTOCOLType;
-class FLUXType;
-class BDD_Cfg_FluxIPType;
+class IPv4AddressType;
+class PLAGEType;
+class EQUIPType;
+class BDD_Cfg_ReseauType;
 
 #include <memory>    // ::std::auto_ptr
 #include <limits>    // std::numeric_limits
@@ -265,128 +266,131 @@ class BDD_Cfg_FluxIPType;
 
 #include <xsd/cxx/xml/dom/parsing-header.hxx>
 
-class PROTOCOLType: public ::xml_schema::type
+class IPv4AddressType: public ::xml_schema::string
 {
   public:
-  // Type
-  //
-  typedef ::xml_schema::string Type_type;
-  typedef ::xsd::cxx::tree::traits< Type_type, char > Type_traits;
-
-  const Type_type&
-  Type () const;
-
-  Type_type&
-  Type ();
-
-  void
-  Type (const Type_type& x);
-
-  void
-  Type (::std::auto_ptr< Type_type > p);
-
-  // Adresse
-  //
-  typedef ::xml_schema::string Adresse_type;
-  typedef ::xsd::cxx::tree::traits< Adresse_type, char > Adresse_traits;
-
-  const Adresse_type&
-  Adresse () const;
-
-  Adresse_type&
-  Adresse ();
-
-  void
-  Adresse (const Adresse_type& x);
-
-  void
-  Adresse (::std::auto_ptr< Adresse_type > p);
-
   // Constructors.
   //
-  PROTOCOLType (const Type_type&,
-                const Adresse_type&);
+  IPv4AddressType ();
 
-  PROTOCOLType (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+  IPv4AddressType (const char*);
 
-  PROTOCOLType (const PROTOCOLType& x,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+  IPv4AddressType (const ::std::string&);
 
-  virtual PROTOCOLType*
+  IPv4AddressType (const ::xml_schema::string&);
+
+  IPv4AddressType (const ::xercesc::DOMElement& e,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+  IPv4AddressType (const ::xercesc::DOMAttr& a,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+  IPv4AddressType (const ::std::string& s,
+                   const ::xercesc::DOMElement* e,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+  IPv4AddressType (const IPv4AddressType& x,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+  virtual IPv4AddressType*
   _clone (::xml_schema::flags f = 0,
           ::xml_schema::container* c = 0) const;
 
-  PROTOCOLType&
-  operator= (const PROTOCOLType& x);
-
   virtual 
-  ~PROTOCOLType ();
-
-  // Implementation.
-  //
-  protected:
-  void
-  parse (::xsd::cxx::xml::dom::parser< char >&,
-         ::xml_schema::flags);
-
-  protected:
-  ::xsd::cxx::tree::one< Type_type > Type_;
-  ::xsd::cxx::tree::one< Adresse_type > Adresse_;
+  ~IPv4AddressType ();
 };
 
-class FLUXType: public ::xml_schema::type
+class PLAGEType: public ::xml_schema::type
 {
   public:
-  // NOM
+  // IP_BASE
   //
-  typedef ::xml_schema::string NOM_type;
-  typedef ::xsd::cxx::tree::traits< NOM_type, char > NOM_traits;
+  typedef ::IPv4AddressType IP_BASE_type;
+  typedef ::xsd::cxx::tree::traits< IP_BASE_type, char > IP_BASE_traits;
 
-  const NOM_type&
-  NOM () const;
+  const IP_BASE_type&
+  IP_BASE () const;
 
-  NOM_type&
-  NOM ();
-
-  void
-  NOM (const NOM_type& x);
+  IP_BASE_type&
+  IP_BASE ();
 
   void
-  NOM (::std::auto_ptr< NOM_type > p);
+  IP_BASE (const IP_BASE_type& x);
 
-  // PORT
+  void
+  IP_BASE (::std::auto_ptr< IP_BASE_type > p);
+
+  // IP_MIN
   //
-  typedef ::xml_schema::unsigned_short PORT_type;
-  typedef ::xsd::cxx::tree::traits< PORT_type, char > PORT_traits;
+  typedef ::IPv4AddressType IP_MIN_type;
+  typedef ::xsd::cxx::tree::traits< IP_MIN_type, char > IP_MIN_traits;
 
-  const PORT_type&
-  PORT () const;
+  const IP_MIN_type&
+  IP_MIN () const;
 
-  PORT_type&
-  PORT ();
+  IP_MIN_type&
+  IP_MIN ();
 
   void
-  PORT (const PORT_type& x);
+  IP_MIN (const IP_MIN_type& x);
 
-  // PROTOCOL
+  void
+  IP_MIN (::std::auto_ptr< IP_MIN_type > p);
+
+  // IP_MAX
   //
-  typedef ::PROTOCOLType PROTOCOL_type;
-  typedef ::xsd::cxx::tree::traits< PROTOCOL_type, char > PROTOCOL_traits;
+  typedef ::IPv4AddressType IP_MAX_type;
+  typedef ::xsd::cxx::tree::traits< IP_MAX_type, char > IP_MAX_traits;
 
-  const PROTOCOL_type&
-  PROTOCOL () const;
+  const IP_MAX_type&
+  IP_MAX () const;
 
-  PROTOCOL_type&
-  PROTOCOL ();
-
-  void
-  PROTOCOL (const PROTOCOL_type& x);
+  IP_MAX_type&
+  IP_MAX ();
 
   void
-  PROTOCOL (::std::auto_ptr< PROTOCOL_type > p);
+  IP_MAX (const IP_MAX_type& x);
+
+  void
+  IP_MAX (::std::auto_ptr< IP_MAX_type > p);
+
+  // IP_MASQUE
+  //
+  typedef ::IPv4AddressType IP_MASQUE_type;
+  typedef ::xsd::cxx::tree::traits< IP_MASQUE_type, char > IP_MASQUE_traits;
+
+  const IP_MASQUE_type&
+  IP_MASQUE () const;
+
+  IP_MASQUE_type&
+  IP_MASQUE ();
+
+  void
+  IP_MASQUE (const IP_MASQUE_type& x);
+
+  void
+  IP_MASQUE (::std::auto_ptr< IP_MASQUE_type > p);
+
+  // IP_BROADCAST
+  //
+  typedef ::IPv4AddressType IP_BROADCAST_type;
+  typedef ::xsd::cxx::tree::traits< IP_BROADCAST_type, char > IP_BROADCAST_traits;
+
+  const IP_BROADCAST_type&
+  IP_BROADCAST () const;
+
+  IP_BROADCAST_type&
+  IP_BROADCAST ();
+
+  void
+  IP_BROADCAST (const IP_BROADCAST_type& x);
+
+  void
+  IP_BROADCAST (::std::auto_ptr< IP_BROADCAST_type > p);
 
   // IDENTIFIANT
   //
@@ -409,96 +413,128 @@ class FLUXType: public ::xml_schema::type
   void
   IDENTIFIANT (::std::auto_ptr< IDENTIFIANT_type > p);
 
-  // IP_Emetteur
-  //
-  typedef ::xml_schema::string IP_Emetteur_type;
-  typedef ::xsd::cxx::tree::optional< IP_Emetteur_type > IP_Emetteur_optional;
-  typedef ::xsd::cxx::tree::traits< IP_Emetteur_type, char > IP_Emetteur_traits;
-
-  const IP_Emetteur_optional&
-  IP_Emetteur () const;
-
-  IP_Emetteur_optional&
-  IP_Emetteur ();
-
-  void
-  IP_Emetteur (const IP_Emetteur_type& x);
-
-  void
-  IP_Emetteur (const IP_Emetteur_optional& x);
-
-  void
-  IP_Emetteur (::std::auto_ptr< IP_Emetteur_type > p);
-
-  // IP_Dest
-  //
-  typedef ::xml_schema::string IP_Dest_type;
-  typedef ::xsd::cxx::tree::optional< IP_Dest_type > IP_Dest_optional;
-  typedef ::xsd::cxx::tree::traits< IP_Dest_type, char > IP_Dest_traits;
-
-  const IP_Dest_optional&
-  IP_Dest () const;
-
-  IP_Dest_optional&
-  IP_Dest ();
-
-  void
-  IP_Dest (const IP_Dest_type& x);
-
-  void
-  IP_Dest (const IP_Dest_optional& x);
-
-  void
-  IP_Dest (::std::auto_ptr< IP_Dest_type > p);
-
-  // DATA_FORMAT
-  //
-  typedef ::xml_schema::string DATA_FORMAT_type;
-  typedef ::xsd::cxx::tree::optional< DATA_FORMAT_type > DATA_FORMAT_optional;
-  typedef ::xsd::cxx::tree::traits< DATA_FORMAT_type, char > DATA_FORMAT_traits;
-
-  const DATA_FORMAT_optional&
-  DATA_FORMAT () const;
-
-  DATA_FORMAT_optional&
-  DATA_FORMAT ();
-
-  void
-  DATA_FORMAT (const DATA_FORMAT_type& x);
-
-  void
-  DATA_FORMAT (const DATA_FORMAT_optional& x);
-
-  void
-  DATA_FORMAT (::std::auto_ptr< DATA_FORMAT_type > p);
-
   // Constructors.
   //
-  FLUXType (const NOM_type&,
-            const PORT_type&,
-            const PROTOCOL_type&);
+  PLAGEType (const IP_BASE_type&,
+             const IP_MIN_type&,
+             const IP_MAX_type&,
+             const IP_MASQUE_type&,
+             const IP_BROADCAST_type&);
 
-  FLUXType (const NOM_type&,
-            const PORT_type&,
-            ::std::auto_ptr< PROTOCOL_type >);
+  PLAGEType (const ::xercesc::DOMElement& e,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
 
-  FLUXType (const ::xercesc::DOMElement& e,
-            ::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0);
+  PLAGEType (const PLAGEType& x,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
 
-  FLUXType (const FLUXType& x,
-            ::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0);
-
-  virtual FLUXType*
+  virtual PLAGEType*
   _clone (::xml_schema::flags f = 0,
           ::xml_schema::container* c = 0) const;
 
-  FLUXType&
-  operator= (const FLUXType& x);
+  PLAGEType&
+  operator= (const PLAGEType& x);
 
   virtual 
-  ~FLUXType ();
+  ~PLAGEType ();
+
+  // Implementation.
+  //
+  protected:
+  void
+  parse (::xsd::cxx::xml::dom::parser< char >&,
+         ::xml_schema::flags);
+
+  protected:
+  ::xsd::cxx::tree::one< IP_BASE_type > IP_BASE_;
+  ::xsd::cxx::tree::one< IP_MIN_type > IP_MIN_;
+  ::xsd::cxx::tree::one< IP_MAX_type > IP_MAX_;
+  ::xsd::cxx::tree::one< IP_MASQUE_type > IP_MASQUE_;
+  ::xsd::cxx::tree::one< IP_BROADCAST_type > IP_BROADCAST_;
+  IDENTIFIANT_optional IDENTIFIANT_;
+};
+
+class EQUIPType: public ::xml_schema::type
+{
+  public:
+  // NOM
+  //
+  typedef ::xml_schema::string NOM_type;
+  typedef ::xsd::cxx::tree::traits< NOM_type, char > NOM_traits;
+
+  const NOM_type&
+  NOM () const;
+
+  NOM_type&
+  NOM ();
+
+  void
+  NOM (const NOM_type& x);
+
+  void
+  NOM (::std::auto_ptr< NOM_type > p);
+
+  // IP
+  //
+  typedef ::IPv4AddressType IP_type;
+  typedef ::xsd::cxx::tree::traits< IP_type, char > IP_traits;
+
+  const IP_type&
+  IP () const;
+
+  IP_type&
+  IP ();
+
+  void
+  IP (const IP_type& x);
+
+  void
+  IP (::std::auto_ptr< IP_type > p);
+
+  // IDENTIFIANT
+  //
+  typedef ::xml_schema::string IDENTIFIANT_type;
+  typedef ::xsd::cxx::tree::optional< IDENTIFIANT_type > IDENTIFIANT_optional;
+  typedef ::xsd::cxx::tree::traits< IDENTIFIANT_type, char > IDENTIFIANT_traits;
+
+  const IDENTIFIANT_optional&
+  IDENTIFIANT () const;
+
+  IDENTIFIANT_optional&
+  IDENTIFIANT ();
+
+  void
+  IDENTIFIANT (const IDENTIFIANT_type& x);
+
+  void
+  IDENTIFIANT (const IDENTIFIANT_optional& x);
+
+  void
+  IDENTIFIANT (::std::auto_ptr< IDENTIFIANT_type > p);
+
+  // Constructors.
+  //
+  EQUIPType (const NOM_type&,
+             const IP_type&);
+
+  EQUIPType (const ::xercesc::DOMElement& e,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+  EQUIPType (const EQUIPType& x,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+  virtual EQUIPType*
+  _clone (::xml_schema::flags f = 0,
+          ::xml_schema::container* c = 0) const;
+
+  EQUIPType&
+  operator= (const EQUIPType& x);
+
+  virtual 
+  ~EQUIPType ();
 
   // Implementation.
   //
@@ -509,57 +545,68 @@ class FLUXType: public ::xml_schema::type
 
   protected:
   ::xsd::cxx::tree::one< NOM_type > NOM_;
-  ::xsd::cxx::tree::one< PORT_type > PORT_;
-  ::xsd::cxx::tree::one< PROTOCOL_type > PROTOCOL_;
+  ::xsd::cxx::tree::one< IP_type > IP_;
   IDENTIFIANT_optional IDENTIFIANT_;
-  IP_Emetteur_optional IP_Emetteur_;
-  IP_Dest_optional IP_Dest_;
-  DATA_FORMAT_optional DATA_FORMAT_;
 };
 
-class BDD_Cfg_FluxIPType: public ::xml_schema::type
+class BDD_Cfg_ReseauType: public ::xml_schema::type
 {
   public:
-  // FLUX
+  // PLAGE
   //
-  typedef ::FLUXType FLUX_type;
-  typedef ::xsd::cxx::tree::traits< FLUX_type, char > FLUX_traits;
+  typedef ::PLAGEType PLAGE_type;
+  typedef ::xsd::cxx::tree::sequence< PLAGE_type > PLAGE_sequence;
+  typedef PLAGE_sequence::iterator PLAGE_iterator;
+  typedef PLAGE_sequence::const_iterator PLAGE_const_iterator;
+  typedef ::xsd::cxx::tree::traits< PLAGE_type, char > PLAGE_traits;
 
-  const FLUX_type&
-  FLUX () const;
+  const PLAGE_sequence&
+  PLAGE () const;
 
-  FLUX_type&
-  FLUX ();
+  PLAGE_sequence&
+  PLAGE ();
 
   void
-  FLUX (const FLUX_type& x);
+  PLAGE (const PLAGE_sequence& s);
+
+  // EQUIP
+  //
+  typedef ::EQUIPType EQUIP_type;
+  typedef ::xsd::cxx::tree::sequence< EQUIP_type > EQUIP_sequence;
+  typedef EQUIP_sequence::iterator EQUIP_iterator;
+  typedef EQUIP_sequence::const_iterator EQUIP_const_iterator;
+  typedef ::xsd::cxx::tree::traits< EQUIP_type, char > EQUIP_traits;
+
+  const EQUIP_sequence&
+  EQUIP () const;
+
+  EQUIP_sequence&
+  EQUIP ();
 
   void
-  FLUX (::std::auto_ptr< FLUX_type > p);
+  EQUIP (const EQUIP_sequence& s);
 
   // Constructors.
   //
-  BDD_Cfg_FluxIPType (const FLUX_type&);
+  BDD_Cfg_ReseauType ();
 
-  BDD_Cfg_FluxIPType (::std::auto_ptr< FLUX_type >);
-
-  BDD_Cfg_FluxIPType (const ::xercesc::DOMElement& e,
+  BDD_Cfg_ReseauType (const ::xercesc::DOMElement& e,
                       ::xml_schema::flags f = 0,
                       ::xml_schema::container* c = 0);
 
-  BDD_Cfg_FluxIPType (const BDD_Cfg_FluxIPType& x,
+  BDD_Cfg_ReseauType (const BDD_Cfg_ReseauType& x,
                       ::xml_schema::flags f = 0,
                       ::xml_schema::container* c = 0);
 
-  virtual BDD_Cfg_FluxIPType*
+  virtual BDD_Cfg_ReseauType*
   _clone (::xml_schema::flags f = 0,
           ::xml_schema::container* c = 0) const;
 
-  BDD_Cfg_FluxIPType&
-  operator= (const BDD_Cfg_FluxIPType& x);
+  BDD_Cfg_ReseauType&
+  operator= (const BDD_Cfg_ReseauType& x);
 
   virtual 
-  ~BDD_Cfg_FluxIPType ();
+  ~BDD_Cfg_ReseauType ();
 
   // Implementation.
   //
@@ -569,7 +616,8 @@ class BDD_Cfg_FluxIPType: public ::xml_schema::type
          ::xml_schema::flags);
 
   protected:
-  ::xsd::cxx::tree::one< FLUX_type > FLUX_;
+  PLAGE_sequence PLAGE_;
+  EQUIP_sequence EQUIP_;
 };
 
 #include <iosfwd>
@@ -581,19 +629,19 @@ class BDD_Cfg_FluxIPType: public ::xml_schema::type
 // Parse a URI or a local file.
 //
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& uri,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& uri,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& uri,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& uri,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::std::string& uri,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::std::string& uri,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -601,38 +649,38 @@ BDD_Cfg_FluxIP (const ::std::string& uri,
 // Parse std::istream.
 //
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::std::istream& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::std::istream& is,
                 const ::std::string& id,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -641,19 +689,19 @@ BDD_Cfg_FluxIP (::std::istream& is,
 // Parse xercesc::InputSource.
 //
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xercesc::InputSource& is,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xercesc::InputSource& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -661,13 +709,13 @@ BDD_Cfg_FluxIP (::xercesc::InputSource& is,
 // Parse xercesc::DOMDocument.
 //
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (const ::xercesc::DOMDocument& d,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (const ::xercesc::DOMDocument& d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
-::std::auto_ptr< ::BDD_Cfg_FluxIPType >
-BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
+::std::auto_ptr< ::BDD_Cfg_ReseauType >
+BDD_Cfg_Reseau (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
 
@@ -683,23 +731,23 @@ BDD_Cfg_FluxIP (::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument > d,
 //
 
 void
-BDD_Cfg_FluxIP (::std::ostream& os,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::std::ostream& os,
+                const ::BDD_Cfg_ReseauType& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
 
 void
-BDD_Cfg_FluxIP (::std::ostream& os,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::std::ostream& os,
+                const ::BDD_Cfg_ReseauType& x, 
                 ::xml_schema::error_handler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
 
 void
-BDD_Cfg_FluxIP (::std::ostream& os,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::std::ostream& os,
+                const ::BDD_Cfg_ReseauType& x, 
                 ::xercesc::DOMErrorHandler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -709,23 +757,23 @@ BDD_Cfg_FluxIP (::std::ostream& os,
 //
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& ft,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& ft,
+                const ::BDD_Cfg_ReseauType& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& ft,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& ft,
+                const ::BDD_Cfg_ReseauType& x, 
                 ::xml_schema::error_handler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
 
 void
-BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& ft,
-                const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (::xercesc::XMLFormatTarget& ft,
+                const ::BDD_Cfg_ReseauType& x, 
                 ::xercesc::DOMErrorHandler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -735,26 +783,36 @@ BDD_Cfg_FluxIP (::xercesc::XMLFormatTarget& ft,
 //
 
 void
-BDD_Cfg_FluxIP (::xercesc::DOMDocument& d,
-                const ::BDD_Cfg_FluxIPType& x,
+BDD_Cfg_Reseau (::xercesc::DOMDocument& d,
+                const ::BDD_Cfg_ReseauType& x,
                 ::xml_schema::flags f = 0);
 
 // Serialize to a new xercesc::DOMDocument.
 //
 
 ::xml_schema::dom::auto_ptr< ::xercesc::DOMDocument >
-BDD_Cfg_FluxIP (const ::BDD_Cfg_FluxIPType& x, 
+BDD_Cfg_Reseau (const ::BDD_Cfg_ReseauType& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 ::xml_schema::flags f = 0);
 
 void
-operator<< (::xercesc::DOMElement&, const PROTOCOLType&);
+operator<< (::xercesc::DOMElement&, const IPv4AddressType&);
 
 void
-operator<< (::xercesc::DOMElement&, const FLUXType&);
+operator<< (::xercesc::DOMAttr&, const IPv4AddressType&);
 
 void
-operator<< (::xercesc::DOMElement&, const BDD_Cfg_FluxIPType&);
+operator<< (::xml_schema::list_stream&,
+            const IPv4AddressType&);
+
+void
+operator<< (::xercesc::DOMElement&, const PLAGEType&);
+
+void
+operator<< (::xercesc::DOMElement&, const EQUIPType&);
+
+void
+operator<< (::xercesc::DOMElement&, const BDD_Cfg_ReseauType&);
 
 #include <xsd/cxx/post.hxx>
 
@@ -763,4 +821,4 @@ operator<< (::xercesc::DOMElement&, const BDD_Cfg_FluxIPType&);
 //
 // End epilogue.
 
-#endif // C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_FLUX_IP_HXX
+#endif // C__D_SAFRAN_STROMBOLI_SVN_STROMBOLI_XSD_CFG_IP_HXX
